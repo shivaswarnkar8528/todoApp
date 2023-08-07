@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <TodoInput formData={formData} setFormdata={setFormdata} />
-      <div>
+      <div className="tasktable" >
         <TaskTable formData={formData} setFormdata={setFormdata} />
       </div>
     </div>

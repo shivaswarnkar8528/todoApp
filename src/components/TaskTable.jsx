@@ -1,5 +1,7 @@
 import { color } from "@mui/system";
 import React from "react";
+import { RiDeleteBin6Line, RiSkipBackFill } from 'react-icons/ri';
+
 
 function TaskTable({ formData, setFormdata }) {
     function handleStatus(index){
@@ -7,6 +9,12 @@ function TaskTable({ formData, setFormdata }) {
         let obj = {...data[index], status:'complete'};
         data[index] = obj; 
         setFormdata(data);
+    }
+    const handleDelete=(index)=>{
+      console.log(index);
+      let data=[...formData];
+      data.splice(index,1);
+      setFormdata(data);
     }
     function clearAll(){
         let data=[...formData];
@@ -23,7 +31,9 @@ function TaskTable({ formData, setFormdata }) {
             <th style={{ width: "250px" }}>Title</th>
             <th style={{ width: "400px" }}>Description</th>
             <th>Priority</th>
-            <th>completed</th>
+            <th>mark</th>
+            <th>Delete</th>
+
           </tr>
         </thead>
         <tbody>
@@ -36,6 +46,8 @@ function TaskTable({ formData, setFormdata }) {
                     <td style={{ maxWidth: "500px",wordBreak:"break-all"} }>{task.description}</td>
                     <td>{task.priority}</td>
                     <td><input type="checkbox" onClick={()=>handleStatus(index)}/></td>
+                    <td><RiDeleteBin6Line style={{color:"red", backgroundColor:"white",marginLeft:"10px"}} onClick={()=>handleDelete(index)}/></td>
+
                 </tr>:""}
                 </>
             }):""
