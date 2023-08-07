@@ -23,6 +23,7 @@ function TodoInput({ setFormdata, formData }) {
 
   return (
     <div className="formmain">
+      <h2 style={{textAlign:"center"}}>My ToDo list</h2>
       <form action="" onSubmit={onSubmit} className="form">
         <div>
           <label htmlFor="">Task : </label> <br /><br />

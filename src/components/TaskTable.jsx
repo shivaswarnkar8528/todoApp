@@ -57,7 +57,7 @@ function TaskTable({ formData, setFormdata }) {
       </table>
 
 
-      <h3>completed Task</h3> <button onClick={clearAll}>Clear All</button>
+      <h3>completed Task</h3> <button style={{backgroundColor:"aliceblue",color:"black"}} onClick={clearAll}>Clear All</button>
       <table border={"1px"}>
         <thead>
           <tr>

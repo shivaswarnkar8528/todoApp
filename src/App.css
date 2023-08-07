@@ -1,23 +1,29 @@
-body{
-  background-color: rgb(243, 238, 238);
+
+*{
+  background-color: rgb(34, 31, 32);
+  color: white;
 }
 .form{
   padding:1%;
-  width: 30%;
-  border:2px solid rgb(17, 16, 16);margin: 0px auto;
+  width: 35vw;
+  border:2px solid rgb(238, 233, 233);margin: 0px auto; 
 }
 .form>div{
  margin:20px; 
 }
 .form>div>label{
-  background-color: rgb(0, 60, 255);padding: 5px; color: white;
+  background-color:crimson;padding: 5px; color: white;
  }
 .formmain{
- margin:0px auto;
+ margin:0px auto;margin-top: 1%;
 }
 .formmain input[type="text"],.formmain textarea{
   padding: 10px;
-  width: 300px;
+  width: 70%; background-color: azure; color: black;
+}
+.formmain input[type="submit"]{
+  padding: 10px;background-color:rgb(232, 232, 240);
+  font-weight: bolder; color: rgb(0, 0, 0); border: none; border-radius: 5px;
 }
 button,.formmain input[type="tsubmitext"]{
   padding: 8px; border-radius: 5px;
@@ -26,4 +32,19 @@ button,.formmain input[type="tsubmitext"]{
 
 .tasktable{
   display: flex; justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .formmain input[type="text"],.formmain textarea{
+    padding: 10px;
+    width: 90%;
+  }
+  .formmain input[type="submit"]{
+    padding: 10px;background-color: rgb(238, 232, 232); color: rgb(14, 13, 13);
+  }
+  .form{
+    padding:1%;
+    width: 90vw;
+    border:2px solid rgb(238, 233, 233);margin: 0px auto;
+  }
 }
