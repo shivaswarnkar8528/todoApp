@@ -3,6 +3,8 @@ import "./App.css";
 import TodoInput from "./components/TodoInput";
 import TaskTable from "./components/TaskTable";
 
+
+
 // Custom hook to handle localStorage
 function useLocalStorage(key, initialValue) {
   // Get the stored value from localStorage or use the initialValue
@@ -24,8 +26,6 @@ function useLocalStorage(key, initialValue) {
 
 function App() {
   const [formData, setFormdata] = useLocalStorage('formData', []);
-
-
   return (
     <div className="App">
       <TodoInput formData={formData} setFormdata={setFormdata} />
